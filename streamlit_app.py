@@ -12,6 +12,9 @@ from models.song import CompareRequest, LyricsRequest
 from utils.helpers import AppError
 
 
+OPENAI_API_KEY  = st.secrets.get("OPENAI_API_KEY", "")
+OPENAI_MODEL    = st.secrets.get("OPENAI_MODEL", "gpt-4-mini")
+
 MODE_CONFIG = {
     "analyze": {
         "label": "Analyze",
